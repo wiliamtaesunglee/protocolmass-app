@@ -14,10 +14,14 @@ const HomeScreen = ({ navigation }) => {
           Já possúi uma conta? Acesse
         </Text>
       </TouchableOpacity>
-    <Button 
-    onPress={() => navigation.navigate('ClassGrid') }
-    title='Workout Content'
-    />
+      <Button 
+      onPress={() => navigation.navigate('ClassGrid') }
+      title='Workout Content'
+      />
+      <Button 
+      onPress={() => navigation.navigate('Counter')}
+      title='press button counter'
+      />
     </View>
   )
 };
