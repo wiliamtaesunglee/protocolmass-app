@@ -1,8 +1,25 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>Hello World!</Text>;
+const HomeScreen = ({ navigation }) => {
+  
+  return (
+    <View>
+      <Text style={styles.text}>ProtocolMass</Text>
+      <Button 
+      onPress={() => navigation.navigate('Components')}
+      title='Cadastre-se'/>
+      <TouchableOpacity onPress={() => navigation.navigate('List')}>
+        <Text>
+          Já possúi uma conta? Acesse
+        </Text>
+      </TouchableOpacity>
+    <Button 
+    onPress={() => navigation.navigate('ClassGrid') }
+    title='Workout Content'
+    />
+    </View>
+  )
 };
 
 const styles = StyleSheet.create({
