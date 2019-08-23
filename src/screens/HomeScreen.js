@@ -15,13 +15,22 @@ const HomeScreen = ({ navigation }) => {
         </Text>
       </TouchableOpacity>
       <Button 
-      onPress={() => navigation.navigate('ClassGrid') }
-      title='Workout Content'
+        onPress={() => navigation.navigate('ClassGrid') }
+        title='Workout Content'
       />
       <Button 
-      onPress={() => navigation.navigate('Counter')}
-      title='press button counter'
+        onPress={() => navigation.navigate('Counter')}
+        title='press button counter'
       />
+      <Button
+        onPress={() => navigation.navigate('Color')}
+        title='Color Screen'
+      />
+      <Button 
+        onPress={() => navigation.navigate('Square')}
+        title='square screen'
+      />
+      
     </View>
   )
 };
