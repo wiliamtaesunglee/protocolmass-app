@@ -4,11 +4,11 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 const HomeScreen = ({ navigation }) => {
   
   return (
-    <View>
+    <View style={styles.viewStyleHome}>
       <Text style={styles.text}>ProtocolMass</Text>
       <Button 
-      onPress={() => navigation.navigate('Components')}
-      title='Cadastre-se'/>
+        onPress={() => navigation.navigate('Components')}
+        title='Cadastre-se'/>
       <TouchableOpacity onPress={() => navigation.navigate('List')}>
         <Text>
           Já possúi uma conta? Acesse
@@ -30,7 +30,14 @@ const HomeScreen = ({ navigation }) => {
         onPress={() => navigation.navigate('Square')}
         title='square screen'
       />
-      
+      <Button 
+        onPress={() => navigation.navigate('Text')}
+        title='text Screen'
+      />      
+      <Button
+        onPress={() => navigation.navigate('Box')}
+        title='box screen'
+        />
     </View>
   )
 };
@@ -38,6 +45,10 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30
+  },
+  viewStyleHome: {
+    alignItems: 'center',
+    justifyContent: 'space-around'
   }
 });
 
